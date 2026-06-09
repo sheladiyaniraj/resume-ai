@@ -61,14 +61,14 @@ export default function EducationSection() {
                   value={(edu as unknown as Record<string, string>)[key] ?? ''}
                   onChange={(e) => updateEdu(edu.id, key as keyof EducationItem, e.target.value)}
                   placeholder={placeholder}
-                  className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+                  className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] focus:border-transparent"
                 />
               </div>
             ))}
           </div>
         </div>
       ))}
-      <button onClick={addEducation} className="flex items-center gap-1.5 text-sm text-violet-600 hover:text-violet-800 font-medium">
+      <button onClick={addEducation} className="flex items-center gap-1.5 text-sm text-[#1A6FE8] hover:text-[#1459BF] font-medium">
         <Plus className="w-4 h-4" /> Add education
       </button>
     </div>

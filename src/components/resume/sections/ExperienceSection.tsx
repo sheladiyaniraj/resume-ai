@@ -120,7 +120,7 @@ export default function ExperienceSection() {
                   type="month"
                   value={exp.endDate}
                   onChange={(e) => updateExp(exp.id, 'endDate', e.target.value)}
-                  className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+                  className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] focus:border-transparent"
                 />
               )}
             </div>
@@ -138,12 +138,12 @@ export default function ExperienceSection() {
                     onChange={(e) => updateBullet(exp.id, bi, e.target.value)}
                     placeholder="Led development of a feature that increased revenue by 20%..."
                     rows={2}
-                    className="flex-1 text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 resize-none"
+                    className="flex-1 text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] resize-none"
                   />
                   <div className="flex flex-col gap-0.5">
                     <button
                       onClick={() => setRewritingBullet({ expId: exp.id, idx: bi })}
-                      className="p-1.5 text-violet-400 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-colors"
+                      className="p-1.5 text-[#1A6FE8] hover:text-[#1A6FE8] hover:bg-[#EFF6FF] rounded-lg transition-colors"
                       title="AI rewrite"
                     >
                       <Sparkles className="w-3.5 h-3.5" />
@@ -162,7 +162,7 @@ export default function ExperienceSection() {
             </div>
             <button
               onClick={() => addBullet(exp.id)}
-              className="mt-2 flex items-center gap-1 text-xs text-violet-600 hover:text-violet-800 font-medium"
+              className="mt-2 flex items-center gap-1 text-xs text-[#1A6FE8] hover:text-[#1459BF] font-medium"
             >
               <Plus className="w-3.5 h-3.5" /> Add bullet
             </button>
@@ -180,7 +180,7 @@ export default function ExperienceSection() {
 
       <button
         onClick={addExperience}
-        className="flex items-center gap-1.5 text-sm text-violet-600 hover:text-violet-800 font-medium"
+        className="flex items-center gap-1.5 text-sm text-[#1A6FE8] hover:text-[#1459BF] font-medium"
       >
         <Plus className="w-4 h-4" /> Add position
       </button>
@@ -205,7 +205,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+        className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] focus:border-transparent"
       />
     </div>
   )

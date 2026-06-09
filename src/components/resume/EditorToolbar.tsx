@@ -95,7 +95,7 @@ export default function EditorToolbar({
             value={nameInput}
             onChange={(e) => setNameInput(e.target.value)}
             onKeyDown={(e) => { if (e.key === 'Enter') saveName(); if (e.key === 'Escape') setEditingName(false) }}
-            className="text-sm font-medium text-slate-900 border border-violet-300 rounded px-2 py-0.5 w-40 focus:outline-none"
+            className="text-sm font-medium text-slate-900 border border-[#93C5FD] rounded px-2 py-0.5 w-40 focus:outline-none"
             autoFocus
           />
           <button onClick={saveName} className="p-1 text-emerald-500 hover:text-emerald-600">
@@ -108,7 +108,7 @@ export default function EditorToolbar({
       ) : (
         <button
           onClick={() => { setNameInput(resumeName); setEditingName(true) }}
-          className="text-sm font-medium text-slate-900 hover:text-violet-600 transition-colors max-w-[160px] truncate"
+          className="text-sm font-medium text-slate-900 hover:text-[#1A6FE8] transition-colors max-w-[160px] truncate"
         >
           {resumeName}
         </button>
@@ -150,7 +150,7 @@ export default function EditorToolbar({
                 <button
                   key={t.id}
                   onClick={() => { setTemplate(t.id); setShowTemplates(false) }}
-                  className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${template === t.id ? 'bg-violet-50 text-violet-700' : 'text-slate-700 hover:bg-slate-50'}`}
+                  className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${template === t.id ? 'bg-[#EFF6FF] text-[#1459BF]' : 'text-slate-700 hover:bg-slate-50'}`}
                 >
                   {t.label}
                   {template === t.id && <Check className="w-3.5 h-3.5" />}
@@ -197,7 +197,7 @@ export default function EditorToolbar({
         {/* AI */}
         <button
           onClick={onToggleAI}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${showAIPanel ? 'bg-violet-600 text-white' : 'text-violet-700 bg-violet-50 hover:bg-violet-100'}`}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${showAIPanel ? 'bg-[#1A6FE8] text-white' : 'text-[#1459BF] bg-[#EFF6FF] hover:bg-[#DBEAFE]'}`}
         >
           <Sparkles className="w-3.5 h-3.5" />
           <span className="hidden sm:inline">AI Tools</span>

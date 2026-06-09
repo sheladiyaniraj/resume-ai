@@ -40,7 +40,7 @@ export default function SkillsSection() {
               value={cat.name}
               onChange={(e) => updateCategory(i, 'name', e.target.value)}
               placeholder="e.g. Programming Languages"
-              className="flex-1 text-sm font-medium border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+              className="flex-1 text-sm font-medium border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] focus:border-transparent"
             />
             {content.skills.categories.length > 1 && (
               <button onClick={() => removeCategory(i)} className="p-1.5 text-slate-300 hover:text-red-400 transition-colors">
@@ -52,11 +52,11 @@ export default function SkillsSection() {
             value={cat.skills}
             onChange={(e) => updateCategory(i, 'skills', e.target.value)}
             placeholder="Python, TypeScript, Go, Rust"
-            className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+            className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] focus:border-transparent"
           />
         </div>
       ))}
-      <button onClick={addCategory} className="flex items-center gap-1.5 text-sm text-violet-600 hover:text-violet-800 font-medium">
+      <button onClick={addCategory} className="flex items-center gap-1.5 text-sm text-[#1A6FE8] hover:text-[#1459BF] font-medium">
         <Plus className="w-4 h-4" /> Add category
       </button>
     </div>

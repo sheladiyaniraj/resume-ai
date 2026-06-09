@@ -34,7 +34,7 @@ export default function ContactSection() {
             value={(contact as unknown as Record<string, string>)[key] ?? ''}
             onChange={(e) => update(key, e.target.value)}
             placeholder={placeholder}
-            className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent transition-colors"
+            className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] focus:border-transparent transition-colors"
           />
         </div>
       ))}

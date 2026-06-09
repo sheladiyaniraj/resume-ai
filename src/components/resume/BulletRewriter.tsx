@@ -33,12 +33,12 @@ export default function BulletRewriter({ bullet, onApply, onClose }: Props) {
   }
 
   return (
-    <div className="mt-3 bg-violet-50 border border-violet-200 rounded-xl p-3">
+    <div className="mt-3 bg-[#EFF6FF] border border-[#BFDBFE] rounded-xl p-3">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs font-semibold text-violet-700 flex items-center gap-1">
+        <span className="text-xs font-semibold text-[#1459BF] flex items-center gap-1">
           <Sparkles className="w-3.5 h-3.5" /> AI Bullet Rewriter
         </span>
-        <button onClick={onClose} className="p-0.5 text-violet-400 hover:text-violet-600">
+        <button onClick={onClose} className="p-0.5 text-violet-400 hover:text-[#1A6FE8]">
           <X className="w-3.5 h-3.5" />
         </button>
       </div>
@@ -47,7 +47,7 @@ export default function BulletRewriter({ bullet, onApply, onClose }: Props) {
         <button
           onClick={getVariants}
           disabled={loading}
-          className="w-full flex items-center justify-center gap-2 bg-violet-600 text-white text-xs font-medium py-2 rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50"
+          className="w-full flex items-center justify-center gap-2 bg-[#1A6FE8] text-white text-xs font-medium py-2 rounded-lg hover:bg-[#1459BF] transition-colors disabled:opacity-50"
         >
           {loading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5" />}
           {loading ? 'Generating variants...' : 'Get 3 stronger variants'}
@@ -65,7 +65,7 @@ export default function BulletRewriter({ bullet, onApply, onClose }: Props) {
               </button>
             </div>
           ))}
-          <button onClick={getVariants} className="text-xs text-violet-600 hover:underline">
+          <button onClick={getVariants} className="text-xs text-[#1A6FE8] hover:underline">
             Regenerate
           </button>
         </div>

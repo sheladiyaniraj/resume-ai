@@ -43,7 +43,7 @@ export default function ProjectsSection() {
 
   if (content.projects.length === 0) {
     return (
-      <button onClick={addProject} className="flex items-center gap-1.5 text-sm text-violet-600 hover:text-violet-800 font-medium">
+      <button onClick={addProject} className="flex items-center gap-1.5 text-sm text-[#1A6FE8] hover:text-[#1459BF] font-medium">
         <Plus className="w-4 h-4" /> Add project
       </button>
     )
@@ -71,7 +71,7 @@ export default function ProjectsSection() {
                   value={(project as unknown as Record<string, string>)[key] ?? ''}
                   onChange={(e) => updateProject(project.id, key as keyof ProjectItem, e.target.value)}
                   placeholder={placeholder}
-                  className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:border-transparent"
+                  className="w-full text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] focus:border-transparent"
                 />
               </div>
             ))}
@@ -85,20 +85,20 @@ export default function ProjectsSection() {
                   value={bullet}
                   onChange={(e) => updateBullet(project.id, bi, e.target.value)}
                   placeholder="Built X that achieved Y..."
-                  className="flex-1 text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400"
+                  className="flex-1 text-sm border border-slate-200 rounded-lg px-3 py-2 text-slate-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8]"
                 />
               </div>
             ))}
             <button
               onClick={() => updateProject(project.id, 'bullets', [...project.bullets, ''])}
-              className="flex items-center gap-1 text-xs text-violet-600 hover:text-violet-800 font-medium"
+              className="flex items-center gap-1 text-xs text-[#1A6FE8] hover:text-[#1459BF] font-medium"
             >
               <Plus className="w-3.5 h-3.5" /> Add bullet
             </button>
           </div>
         </div>
       ))}
-      <button onClick={addProject} className="flex items-center gap-1.5 text-sm text-violet-600 hover:text-violet-800 font-medium">
+      <button onClick={addProject} className="flex items-center gap-1.5 text-sm text-[#1A6FE8] hover:text-[#1459BF] font-medium">
         <Plus className="w-4 h-4" /> Add project
       </button>
     </div>

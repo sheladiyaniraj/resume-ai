@@ -97,7 +97,7 @@ export default function AIPanel({ resumeId, isPro, onClose, userId }: Props) {
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
         <div className="flex items-center gap-1.5">
-          <Sparkles className="w-4 h-4 text-violet-600" />
+          <Sparkles className="w-4 h-4 text-[#1A6FE8]" />
           <span className="font-semibold text-sm text-slate-900">AI Tools</span>
         </div>
         <button onClick={onClose} className="p-1 text-slate-400 hover:text-slate-600 transition-colors rounded">
@@ -115,7 +115,7 @@ export default function AIPanel({ resumeId, isPro, onClose, userId }: Props) {
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`py-2.5 px-3 text-xs font-medium border-b-2 transition-colors flex items-center gap-1 ${tab === t.id ? 'border-violet-500 text-violet-700' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+            className={`py-2.5 px-3 text-xs font-medium border-b-2 transition-colors flex items-center gap-1 ${tab === t.id ? 'border-[#1A6FE8] text-[#1459BF]' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
           >
             {t.label}
             {t.pro && !isPro && <Crown className="w-3 h-3 text-amber-400" />}
@@ -133,7 +133,7 @@ export default function AIPanel({ resumeId, isPro, onClose, userId }: Props) {
               onChange={(e) => setJobDescription(e.target.value)}
               placeholder="Paste the job description here..."
               rows={7}
-              className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2.5 text-slate-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 resize-none"
+              className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2.5 text-slate-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] resize-none"
             />
           </div>
         )}
@@ -147,7 +147,7 @@ export default function AIPanel({ resumeId, isPro, onClose, userId }: Props) {
             <button
               onClick={tailorResume}
               disabled={generating}
-              className="w-full flex items-center justify-center gap-2 bg-violet-600 text-white text-sm font-medium py-2.5 rounded-xl hover:bg-violet-700 transition-colors disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 bg-[#1A6FE8] text-white text-sm font-medium py-2.5 rounded-xl hover:bg-[#1459BF] transition-colors disabled:opacity-50"
             >
               {generating ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
               {generating ? 'Tailoring resume...' : 'Tailor to Job Description'}
@@ -230,7 +230,7 @@ export default function AIPanel({ resumeId, isPro, onClose, userId }: Props) {
                   <div className="space-y-2">
                     {atsFeedback.fixes.map((fix, i) => (
                       <div key={i} className="flex gap-2 text-xs text-slate-600 bg-slate-50 rounded-lg p-2.5">
-                        <ChevronRight className="w-3.5 h-3.5 text-violet-500 flex-shrink-0 mt-0.5" />
+                        <ChevronRight className="w-3.5 h-3.5 text-[#1A6FE8] flex-shrink-0 mt-0.5" />
                         <span>{fix}</span>
                       </div>
                     ))}
@@ -254,7 +254,7 @@ export default function AIPanel({ resumeId, isPro, onClose, userId }: Props) {
                 onChange={(e) => setRoughExperience(e.target.value)}
                 placeholder="e.g. Worked at Google for 3 years as SWE, built search ranking systems, increased relevance by 15%. Before that did internships at startups. MIT CS grad 2020..."
                 rows={8}
-                className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2.5 text-slate-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 resize-none"
+                className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2.5 text-slate-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] resize-none"
               />
             </div>
             <div>
@@ -264,13 +264,13 @@ export default function AIPanel({ resumeId, isPro, onClose, userId }: Props) {
                 onChange={(e) => setJobDescription(e.target.value)}
                 placeholder="Paste job description to tailor the output..."
                 rows={4}
-                className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2.5 text-slate-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-violet-400 resize-none"
+                className="w-full text-xs border border-slate-200 rounded-xl px-3 py-2.5 text-slate-800 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#1A6FE8] resize-none"
               />
             </div>
             <button
               onClick={onboardFromExperience}
               disabled={onboarding}
-              className="w-full flex items-center justify-center gap-2 bg-violet-600 text-white text-sm font-medium py-2.5 rounded-xl hover:bg-violet-700 transition-colors disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 bg-[#1A6FE8] text-white text-sm font-medium py-2.5 rounded-xl hover:bg-[#1459BF] transition-colors disabled:opacity-50"
             >
               {onboarding ? <Loader2 className="w-4 h-4 animate-spin" /> : <Sparkles className="w-4 h-4" />}
               {onboarding ? 'Generating resume...' : 'Generate Full Resume'}

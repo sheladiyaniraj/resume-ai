@@ -69,25 +69,27 @@ export default function DashboardClient({ user, initialResumes, subscription }: 
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Header */}
-      <header className="bg-white border-b border-slate-100">
+      <header style={{ backgroundColor: '#1A6FE8' }}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-violet-600" />
-            <span className="font-semibold text-slate-900">ResumeAI</span>
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ backgroundColor: '#3DD94A' }}>
+              <Sparkles className="w-4 h-4 text-white" />
+            </div>
+            <span className="font-black text-white text-lg">ResumeAI</span>
           </div>
           <div className="flex items-center gap-3">
             {isPro ? (
-              <span className="flex items-center gap-1 text-xs font-medium text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full">
-                <Crown className="w-3 h-3" /> Pro
+              <span className="flex items-center gap-1 text-xs font-black px-3 py-1 rounded-full" style={{ backgroundColor: '#F5A623', color: '#0D3C8A' }}>
+                <Crown className="w-3 h-3" /> PRO
               </span>
             ) : (
-              <Link href="/upgrade" className="text-xs text-violet-600 font-medium hover:underline">
+              <Link href="/upgrade" className="text-xs font-black px-3 py-1.5 rounded-full transition-colors" style={{ backgroundColor: '#F5A623', color: '#0D3C8A' }}>
                 Upgrade to Pro
               </Link>
             )}
             <button
               onClick={signOut}
-              className="p-2 text-slate-400 hover:text-slate-600 transition-colors rounded-lg hover:bg-slate-100"
+              className="p-2 text-blue-200 hover:text-white transition-colors rounded-lg hover:bg-white/10"
             >
               <LogOut className="w-4 h-4" />
             </button>
@@ -106,7 +108,8 @@ export default function DashboardClient({ user, initialResumes, subscription }: 
           <button
             onClick={createResume}
             disabled={creating}
-            className="flex items-center gap-2 bg-violet-600 text-white px-4 py-2.5 rounded-xl text-sm font-medium hover:bg-violet-700 transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 text-white px-5 py-2.5 rounded-full text-sm font-black disabled:opacity-50 transition-transform hover:scale-105"
+            style={{ backgroundColor: '#1A6FE8' }}
           >
             <Plus className="w-4 h-4" />
             {creating ? 'Creating...' : 'New Resume'}
@@ -115,15 +118,16 @@ export default function DashboardClient({ user, initialResumes, subscription }: 
 
         {resumes.length === 0 ? (
           <div className="text-center py-24 bg-white rounded-2xl border border-slate-100">
-            <div className="w-14 h-14 bg-violet-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <FileText className="w-7 h-7 text-violet-500" />
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#EFF6FF' }}>
+              <FileText className="w-7 h-7" style={{ color: '#1A6FE8' }} />
             </div>
-            <h2 className="text-lg font-semibold text-slate-900 mb-2">No resumes yet</h2>
+            <h2 className="text-lg font-black text-slate-900 mb-2">No resumes yet</h2>
             <p className="text-sm text-slate-500 mb-6">Create your first AI-tailored resume</p>
             <button
               onClick={createResume}
               disabled={creating}
-              className="inline-flex items-center gap-2 bg-violet-600 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-violet-700 transition-colors"
+              className="inline-flex items-center gap-2 text-white px-6 py-2.5 rounded-full text-sm font-black transition-transform hover:scale-105"
+              style={{ backgroundColor: '#1A6FE8' }}
             >
               <Plus className="w-4 h-4" /> Create Resume
             </button>
@@ -137,8 +141,8 @@ export default function DashboardClient({ user, initialResumes, subscription }: 
                 className="group bg-white border border-slate-200 rounded-2xl p-5 hover:border-violet-200 hover:shadow-sm transition-all"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <div className="w-10 h-10 bg-violet-50 rounded-xl flex items-center justify-center">
-                    <FileText className="w-5 h-5 text-violet-500" />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#EFF6FF' }}>
+                    <FileText className="w-5 h-5" style={{ color: '#1A6FE8' }} />
                   </div>
                   <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button
